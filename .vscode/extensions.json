@@ -1,0 +1,27 @@
+{
+  // List all installed extensions:
+  // $ code --list-extensions;
+  "recommendations": [
+    // ESLint
+    // $ code --install-extension dbaeumer.vscode-eslint;
+    "dbaeumer.vscode-eslint",
+    // EditorConfig for VS Code
+    // $ code --install-extension EditorConfig.EditorConfig;
+    "EditorConfig.EditorConfig",
+    // Prettier - Code formatter
+    // $ code --install-extension esbenp.prettier-vscode;
+    "esbenp.prettier-vscode",
+    // Jest Runner
+    // $ code --install-extension firsttris.vscode-jest-runner;
+    "firsttris.vscode-jest-runner",
+    // Trailing Spaces
+    // $ code --install-extension shardulm94.trailing-spaces;
+    "shardulm94.trailing-spaces",
+    // Auto Rename Tag
+    // $ code --install-extension formulahendry.auto-rename-tag;
+    "formulahendry.auto-rename-tag",
+    // vscode-icons
+    // $ code --install-extension vscode-icons-team.vscode-icons;
+    "vscode-icons-team.vscode-icons"
+  ]
+}

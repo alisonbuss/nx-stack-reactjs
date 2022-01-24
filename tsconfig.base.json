@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lib/shared/*": ["libs/lib-shared/src/*"],
+      "@lib/shared": ["libs/lib-shared/src/index.ts"],
+      "@lib/react/*": ["libs/lib-react/src/*"],
+      "@lib/react": ["libs/lib-react/src/index.ts"],
+      "@app/*": ["apps/react-app/src/app/*"],
+      "@app/envs*": ["apps/react-app/src/environments/*"],
+      "@app/assets*": ["apps/react-app/src/assets/*"],
+      "@next/*": ["apps/react-next/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

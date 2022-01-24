@@ -1,0 +1,83 @@
+{
+  "env": {},
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@nrwl/nx", "import", "@typescript-eslint", "prettier", "react"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        // Font: https://nx.dev/guides/eslint
+        // Font: https://blog.nrwl.io/mastering-the-project-boundaries-in-nx-f095852f5bf4
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allow": [],
+            "allowCircularSelfDependency": true,
+            "enforceBuildableLibDependency": true,
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:@nrwl/nx/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+      ],
+      "rules": {
+        "prettier/prettier": "error",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/unbound-method": "warn",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/ban-types": [
+          "warn",
+          {
+            "extendDefaults": true,
+            "types": {
+              "{}": true
+            }
+          }
+        ],
+        "@typescript-eslint/no-empty-interface": [
+          "warn",
+          {
+            "allowSingleExtends": false
+          }
+        ],
+        "@typescript-eslint/no-implicit-any-catch": [
+          "error",
+          { "allowExplicitAny": false }
+        ],
+        "@typescript-eslint/no-inferrable-types": [
+          "off",
+          {
+            "ignoreParameters": true
+          }
+        ],
+        "no-unused-vars": "warn",
+        "no-console": "warn",
+        "import/default": "off",
+        "import/no-unresolved": "off",
+        "import/no-named-as-default-member": "off"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ]
+}

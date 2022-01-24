@@ -1,0 +1,26 @@
+{
+  "env": {},
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "warn",
+        "no-console": "warn"
+      },
+      "parserOptions": {
+        "project": ["libs/lib-shared/tsconfig.*?.json"]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ]
+}

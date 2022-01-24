@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "projects": {
+    "lib-react": "libs/lib-react",
+    "lib-shared": "libs/lib-shared",
+    "react-app": "apps/react-app",
+    "react-app-e2e": "apps/react-app-e2e",
+    "react-next": "apps/react-next",
+    "react-next-e2e": "apps/react-next-e2e"
+  }
+}
