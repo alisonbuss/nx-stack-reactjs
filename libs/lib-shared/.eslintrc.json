@@ -5,7 +5,6 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "extends": [],
       "rules": {
         "@typescript-eslint/no-explicit-any": "warn",
         "no-console": "warn"

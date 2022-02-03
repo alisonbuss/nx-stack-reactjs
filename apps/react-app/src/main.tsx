@@ -9,6 +9,7 @@ const logger = new LoggerManager('# logger: ', !environment.production);
 
 try {
   logger.info('Initialize the React application...');
+
   ReactDOM.render(
     <React.StrictMode>
       <App />

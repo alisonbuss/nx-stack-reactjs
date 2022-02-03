@@ -22,6 +22,9 @@
     "formulahendry.auto-rename-tag",
     // vscode-icons
     // $ code --install-extension vscode-icons-team.vscode-icons;
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    // vscode-styled-components
+    // $ code --install-extension styled-components.vscode-styled-components;
+    "styled-components.vscode-styled-components"
   ]
 }

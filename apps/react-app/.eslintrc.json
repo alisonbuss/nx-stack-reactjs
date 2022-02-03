@@ -1,11 +1,15 @@
 {
   "env": {},
-  "extends": ["../../.eslintrc.json"],
+  "extends": [
+    "plugin:@nrwl/nx/react",
+    "plugin:@nrwl/nx/react-typescript",
+    "plugin:react/recommended",
+    "../../.eslintrc.json"
+  ],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/react", "plugin:react/recommended"],
       "rules": {
         "react/prop-types": "off",
         "react/jsx-indent": [2, 2],

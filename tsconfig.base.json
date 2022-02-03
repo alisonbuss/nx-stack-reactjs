@@ -22,7 +22,9 @@
       "@app/*": ["apps/react-app/src/app/*"],
       "@app/envs*": ["apps/react-app/src/environments/*"],
       "@app/assets*": ["apps/react-app/src/assets/*"],
-      "@next/*": ["apps/react-next/*"]
+      "@next/*": ["apps/react-next/src/*"],
+      "@e2e/app*": ["apps/react-app-e2e/src/*"],
+      "@e2e/next*": ["apps/react-next-e2e/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

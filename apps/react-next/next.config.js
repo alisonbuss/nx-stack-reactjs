@@ -1,5 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withPlugins = require('next-compose-plugins');
 const withNx = require('@nrwl/next/plugins/with-nx');
+const withImages = require('next-images');
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
@@ -10,6 +11,18 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  useFileSystemPublicRoutes: true,
 };
 
-module.exports = withNx(nextConfig);
+module.exports = withPlugins(
+  [
+    [withNx],
+    [
+      withImages,
+      {
+        esModule: true,
+      },
+    ],
+  ],
+  nextConfig,
+);

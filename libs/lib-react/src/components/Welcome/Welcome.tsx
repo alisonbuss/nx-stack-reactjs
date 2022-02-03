@@ -5,13 +5,14 @@ export interface WelcomeProps {
 }
 
 const StyledWelcome = styled.div`
-  color: pink;
+  // Common Style!
 `;
 
 export function Welcome(props: WelcomeProps) {
   return (
     <StyledWelcome>
-      <h1>{props.message}</h1>
+      <h2>{props.message}</h2>
+      <h1>Welcome to the ReactJS application!</h1>
     </StyledWelcome>
   );
 }

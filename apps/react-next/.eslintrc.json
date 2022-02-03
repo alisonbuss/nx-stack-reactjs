@@ -2,17 +2,24 @@
   "env": {
     "jest": true
   },
-  "extends": ["../../.eslintrc.json"],
+  "extends": [
+    "plugin:@nrwl/nx/react",
+    "plugin:@nrwl/nx/react-typescript",
+    "plugin:react/recommended",
+    "next",
+    "next/core-web-vitals",
+    "../../.eslintrc.json"
+  ],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "extends": [
-        "plugin:@nrwl/nx/react-typescript",
-        "next",
-        "next/core-web-vitals"
-      ],
       "rules": {
+        "react/prop-types": "off",
+        "react/jsx-indent": [2, 2],
+        "react/jsx-indent-props": [2, 2],
+        "react/react-in-jsx-scope": "off",
+        "@next/next/google-font-display": "off",
         "@next/next/no-html-link-for-pages": ["error", "apps/react-next/pages"]
       },
       "parserOptions": {
